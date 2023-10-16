@@ -1,10 +1,11 @@
 @extends('employees.home')
 
 @section('content')
-    <div class="card">
-        <div class="card-header">Edit Employee</div>
 
-        <div class="card-body">
+    <div class="card"><br>
+        <div class="card-header" style="color: blue">Edit Employee</div>
+
+        <div class="card-body"><br>
             <form method="POST" action="{{ route('employees.update', ['employee' => $employee->id]) }}">
                 @csrf
                 @method('PUT')
@@ -38,4 +39,5 @@
             </form>
         </div>
     </div>
+
 @endsection

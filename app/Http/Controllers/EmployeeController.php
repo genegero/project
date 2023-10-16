@@ -10,7 +10,7 @@ class EmployeeController extends Controller
     public function index()
     {
         $employees = Employee::all();
-        return view('employees.index', compact('employees'));
+        return view('employees.index', compact('employees'))->with('employees', $employees);
     }
 
     public function create()
@@ -69,5 +69,11 @@ class EmployeeController extends Controller
         $employee->delete();
 
         return redirect()->route('employees.index')->with('success', 'Employee deleted successfully!');
+    }
+
+    public function page()
+    {
+        $employees = Employee::all();
+        return view('employees.page', compact('employees'))->with('employees', $employees);
     }
 }
