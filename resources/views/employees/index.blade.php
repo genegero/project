@@ -1,55 +1,8 @@
-@extends('employees.home')
+@extends('layouts.app')
 
+@section('page-title','Employee List')
 @section('content')
-
-
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Employees</title>
-       <!-- <style>
-            table {
-      border-collapse: collapse;
-      width: 100%;
-      padding top: 10%;
-    }
-    th, td {
-      border: 2px solid lightblue;
-      padding: 8px;
-      text-align: left;
-
-    }
-
-    th {
-      background-color: mediumaquamarine;
-    }
-    h1{
-        text-align: center
-        content: '\F0179';
-    }
-        </style>-->
-
-
-    </head>
-    <body>
-        <h1 style="text-align: center">Employee List</h1>
-        <div>
-            @if(session()->has('success'))
-            <div>
-                {{ session('success') }}
-            </div>
-            @endif
-        </div>
-    </body>
-    </html>
-<div>
     <a href="{{ route('employees.create') }}" class="btn btn-primary mb-3">Add Employee</a>
-
-</div>
-
     @if ($employees->isEmpty())
         <div class="alert alert-info" role="alert">
             No employees found.

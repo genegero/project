@@ -1,5 +1,5 @@
 
-@extends('employees.home')
+@extends('layouts.app')
 
 @section('content')
     <h1>Employee details</h1>

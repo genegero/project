@@ -5,15 +5,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Employees| Add Employees</title>
+  <title>@yield('title')</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="{{ asset('/plugins/fontawesome-free/css/all.min.css') }}">
   <!-- Theme style -->
 
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -27,10 +27,6 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a class="nav-link" href="{{ route('employees.index') }}">Employees</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a class="nav-link" href="{{ route('employees.create') }}">Add Employee</a>
-      </li>
-
     </ul>
 
     <!-- Right navbar links -->
@@ -133,121 +129,9 @@
                   <p>Add Employee</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="{{ route('contact') }}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Contact</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                About
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('about') }}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>About</p>
-                </a>
-              </li>
 
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="fas fa-user-tie"></i>
-              <p>
-                Profile
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('profile') }}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>photo</p>
-                </a>
-              </li>
-
-            </ul>
-          </li>
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Home
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('home') }}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Home</p>
-                </a>
-              </li>
-            </ul>
-
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Index
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a class="nav-link" href="{{ route('employees.index') }}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>employees table</p>
-                </a>
-              </li>
-
-            </ul>
-
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                  <p>
-                    Create
-                    <i class="fas fa-angle-left right"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="{{ route('employees.create') }}">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>create</p>
-                    </a>
-                  </li>
-                  </ul>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                      <p>
-                        Contact
-                        <i class="fas fa-angle-left right"></i>
-                      </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                      <li class="nav-item">
-                        <a href="{{ route('contact') }}">
-                          <i class="far fa-circle nav-icon"></i>
-                          <p>contact</p>
-                        </a>
-                      </li>
-                     </ul>
-
 
     </ul>
    </nav>
@@ -298,6 +182,7 @@
 
 
     <div class="container mt-4">
+        <h3>@yield('page-title')</h3>
         @yield('content')
     </div>
 

@@ -1,27 +1,9 @@
-@extends('employees.home')
-
+@extends('layouts.app')
+@section('title','Create Employee')
+@section('page-title','Employee Form')
 @section('content')
 
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AddEmployee</title>
-
-
-</head>
-
-<body>
-<!--   <section class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card card-primary">
-                            <div class="card-header">   -->
 <div class="card">
      <div class="card-header" style="color: blue">Create Employee</div>
     <div>
@@ -86,15 +68,4 @@
 
 </div>
 
-
- <!--
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>-->
-
 @endsection
-</body>
-</html>
